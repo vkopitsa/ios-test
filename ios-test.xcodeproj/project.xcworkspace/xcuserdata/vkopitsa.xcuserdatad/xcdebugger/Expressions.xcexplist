@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ShopViewController viewDidLoad]:ShopViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__40-[APIRequest POST:data:success:failure:]_block_invoke:APIRequest.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[APIRequest getRequest:]:APIRequest.m">
+      </ContextState>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "-[UserModel initWithDictionary:]:">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>protocol</key>
+	<string>http://</string>
+	<key>url</key>
+	<string>shop-test.of-it.org</string>
+	<key>route</key>
+	<dict>
+		<key>goods</key>
+		<string>goods</string>
+		<key>oneGoods</key>
+		<string>goods/%@</string>
+		<key>login</key>
+		<string>auth/local</string>
+		<key>register</key>
+		<string>auth/local/register</string>
+	</dict>
+</dict>
+</plist>

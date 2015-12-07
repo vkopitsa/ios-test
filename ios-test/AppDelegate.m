@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ShopViewController.h"
+#import "APIAuth.h"
 
 @interface AppDelegate ()
 
@@ -14,8 +16,40 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL authenticatedUser = [[APIAuth sharedManager] isAuthorization];
+    
+    UIViewController *initialViewController = nil;
+    
+    
+    if (authenticatedUser) {
+        UIStoryboard *loginRegistation = [UIStoryboard storyboardWithName:@"Shop" bundle:nil];
+        
+        // Instantiate the initial view controller object from the storyboard
+        initialViewController = [loginRegistation instantiateInitialViewController];
+        //initialViewController = [loginRegistation instantiateViewControllerWithIdentifier:@"shop"];
+        
+    }else{
+        UIStoryboard *loginRegistation = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        
+        // Instantiate the initial view controller object from the storyboard
+        initialViewController = [loginRegistation instantiateInitialViewController];
+    }
+    
+    
+    // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Set the initial view controller to be the root view controller of the window object
+    self.window.rootViewController  = initialViewController;
+    
+    // Set the window object to be the key window and show it
+    [self.window makeKeyAndVisible];
+    
+    
+    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -122,6 +156,46 @@
             abort();
         }
     }
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"access_token=(\\w*)&" options:0 error:NULL];
+    NSString *str = [url absoluteString];
+    NSTextCheckingResult *match = [regex firstMatchInString:str options:0 range:NSMakeRange(0, [str length])];
+    
+    NSLog(@"%@", [str substringWithRange:[match rangeAtIndex:1]]);
+    
+    
+    if ([sourceApplication containsString: @"com.apple.mobilesafari"]) {
+        
+        UIViewController *initialViewController = nil;
+        
+        
+        UIStoryboard *loginRegistation = [UIStoryboard storyboardWithName:@"Shop" bundle:nil];
+        
+        // Instantiate the initial view controller object from the storyboard
+        //initialViewController = [loginRegistation instantiateViewControllerWithIdentifier:@"shop"];
+        initialViewController = [loginRegistation instantiateInitialViewController];
+
+        // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
+        // Set the initial view controller to be the root view controller of the window object
+        self.window.rootViewController  = initialViewController;
+        
+        // Set the window object to be the key window and show it
+        [self.window makeKeyAndVisible];
+    }
+
+
+   // self.window.rootViewController = [[UIStoryboard storyboardWithName:@"shop" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"shop"];
+
+    
+    return YES;
 }
 
 @end
