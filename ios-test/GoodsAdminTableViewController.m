@@ -134,6 +134,19 @@
     cell.name.text = message.name;
     cell.price.text = [NSString stringWithFormat:@"%@, USD", message.price];
     cell.count.text = [NSString stringWithFormat:@"%@", message.count];
+    
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        
+        NSURL * imageURL = [[APIRequest sharedManager] getUrl:[NSString stringWithFormat:@"images/%@", message.image]];
+        
+        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage * image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.image.image = image;
+        });
+    });
+
 }
 
 
@@ -248,28 +261,6 @@
 -(void) deleteGoogs:(NSIndexPath *) indexPath
 {
     GoodsModel * goods = [self.goods objectAtIndex:indexPath.row];
-    
-    
-    
-    
-//    InboxListRequestModel *requestModel = [InboxListRequestModel new];
-//    
-//    [[APIManager sharedManager] removeInbox:requestModel inbox:inbox.id success:^(NSDictionary *responseModel) {
-//        
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            @autoreleasepool {
-//                
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [self.inboxes removeObjectAtIndex:indexPath.row];
-//                    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-//                    
-//                });
-//            }
-//        });
-//        
-//    } failure:^(NSError *error) {
-//        [self.tableView reloadData];
-//    }];
     
     [[APIManager sharedManager] removeGoods:goods success:^(NSMutableArray * data){
         

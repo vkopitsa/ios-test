@@ -27,6 +27,18 @@
     self.price.text = [NSString stringWithFormat:@"%@", self.goods.price];
     self.amount.text = [NSString stringWithFormat:@"%d", 0];
     
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        
+        NSURL * imageURL = [[APIRequest sharedManager] getUrl:[NSString stringWithFormat:@"images/%@", self.goods.image]];
+        
+        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage * image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image.image = image;
+        });
+    });
+    
     [self disableBuy];
     
 }

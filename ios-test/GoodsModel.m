@@ -14,6 +14,7 @@
 @synthesize name;
 @synthesize price;
 @synthesize count;
+@synthesize image;
 @synthesize createdAt;
 @synthesize updatedAt;
 
@@ -25,6 +26,7 @@
         name = [object[@"name"] copy];
         price = [object[@"price"] copy];
         count = [object[@"count"] copy];
+        image = [object[@"image"] copy];
         //createdAt = [self.class.dateFormatter dateFromString:object[@"createdAt"]];
         //updatedAt = [self.class.dateFormatter dateFromString:object[@"updatedAt"]];
         
@@ -46,6 +48,7 @@
     name = [coder decodeObjectForKey:@"name"];
     price = [coder decodeObjectForKey:@"price"];
     count = [coder decodeObjectForKey:@"count"];
+    image = [coder decodeObjectForKey:@"image"];
     createdAt = [coder decodeObjectForKey:@"createdAt"];
     updatedAt = [coder decodeObjectForKey:@"updatedAt"];
     
@@ -57,6 +60,7 @@
     if (self.name != nil) [coder encodeObject:self.name forKey:@"name"];
     if (self.price != nil) [coder encodeObject:self.price forKey:@"price"];
     if (self.count != nil) [coder encodeObject:self.count forKey:@"count"];
+    if (self.image != nil) [coder encodeObject:self.image forKey:@"image"];
     if (self.createdAt != nil) [coder encodeObject:self.createdAt forKey:@"createdAt"];
     if (self.updatedAt != nil) [coder encodeObject:self.updatedAt forKey:@"updatedAt"];
 }
@@ -67,6 +71,7 @@
     goods->name = self.name;
     goods->price = self.price;
     goods->count = self.count;
+    goods->image = self.image;
     goods->createdAt = self.createdAt;
     goods->updatedAt = self.updatedAt;
     
@@ -81,7 +86,7 @@
 - (BOOL)isEqual:(GoodsModel *)goods {
     if (![goods isKindOfClass:GoodsModel.class]) return NO;
     
-    return [self.uid isEqual:goods.uid] && [self.name isEqual:goods.name] && [self.price isEqual:goods.price] && [self.count isEqual:goods.count];
+    return [self.uid isEqual:goods.uid] && [self.name isEqual:goods.name] && [self.price isEqual:goods.price] && [self.count isEqual:goods.count] && [self.image isEqual:goods.image];
 }
 
 @end

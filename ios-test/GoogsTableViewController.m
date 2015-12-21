@@ -154,6 +154,19 @@
     cell.name.text = message.name;
     cell.price.text = [NSString stringWithFormat:@"%@, USD", message.price];
     cell.amount.text = [NSString stringWithFormat:@"%@, pieces", message.count];
+    
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        
+        NSURL * imageURL = [[APIRequest sharedManager] getUrl:[NSString stringWithFormat:@"images/%@", message.image]];
+        
+        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage * image = [UIImage imageWithData:imageData];
+                         
+       dispatch_async(dispatch_get_main_queue(), ^{
+           cell.image.image = image;
+        });
+    });
+    
 }
 
 

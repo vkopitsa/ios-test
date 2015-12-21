@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GoodsModel.h"
+#import "APIRequest.h"
 
 @interface GoodsViewController : UIViewController
 

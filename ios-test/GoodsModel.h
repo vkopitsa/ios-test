@@ -13,6 +13,7 @@
 @property (nonatomic, copy) NSNumber *uid;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *price;
+@property (nonatomic, copy) NSString *image;
 @property (nonatomic, copy) NSNumber *count;
 @property (nonatomic, copy) NSDate *createdAt;
 @property (nonatomic, copy) NSDate *updatedAt;

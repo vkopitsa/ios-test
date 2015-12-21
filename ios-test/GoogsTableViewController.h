@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "APIRequest.h"
 
 @interface GoogsTableViewController : UITableViewController
 - (IBAction)logout:(id)sender;

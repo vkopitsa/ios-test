@@ -10,6 +10,8 @@
 
 @interface APIRequest : NSObject
 
+- (NSURL *) getUrl: (NSString *) url;
+
 - (void)GET:(NSString *)url
     success:(void (^)(id))success
     failure:(void (^)(NSError *error))failure;

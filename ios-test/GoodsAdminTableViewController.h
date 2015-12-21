@@ -11,6 +11,7 @@
 #import "APIManager.h"
 #import "GoodsAdminCellTableViewCell.h"
 #import "GoodsUpdateViewController.h"
+#import "APIRequest.h"
 
 @interface GoodsAdminTableViewController : UITableViewController
 - (IBAction)logout:(id)sender;

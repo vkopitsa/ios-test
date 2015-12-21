@@ -11,6 +11,7 @@
 #import "CartManager.h"
 #import "CartCollectionViewCell.h"
 #import "GoodsModel.h"
+#import "APIRequest.h"
 
 @interface CartCollectionViewController : UICollectionViewController
 - (IBAction)cancel:(id)sender;

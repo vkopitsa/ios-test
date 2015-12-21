@@ -21,7 +21,7 @@
     self.name.text = self.goods.name;
     self.price.text = [NSString stringWithFormat:@"%@", self.goods.price];
     self.amount.text = [NSString stringWithFormat:@"%@", self.goods.count];
-    self.image.text = @"TODO";
+    self.image.text = self.goods.image;
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self
