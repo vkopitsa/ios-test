@@ -24,6 +24,8 @@
 
 - (BOOL)isAuthorization;
 
+- (NSString *)getToken;
+
 - (void) logout;
 
 

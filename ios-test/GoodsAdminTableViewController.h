@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "APIManager.h"
+#import "GoodsAdminCellTableViewCell.h"
+#import "GoodsUpdateViewController.h"
 
 @interface GoodsAdminTableViewController : UITableViewController
 - (IBAction)logout:(id)sender;

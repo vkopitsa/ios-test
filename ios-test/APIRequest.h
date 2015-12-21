@@ -19,6 +19,15 @@
      success:(void (^)(id))success
      failure:(void (^)(NSError *error))failure;
 
+- (void)PUT:(NSString *)url
+        data:(NSString *)data
+     success:(void (^)(id))success
+     failure:(void (^)(NSError *error))failure;
+
+- (void)DELETE:(NSString *)url
+    success:(void (^)(id))success
+    failure:(void (^)(NSError *error))failure;
+
 + (id) sharedManager;
 
 @end

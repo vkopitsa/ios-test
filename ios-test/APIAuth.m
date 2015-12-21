@@ -70,6 +70,11 @@
     return [self loadUser:@"user"].uid != nil;
 }
 
+- (NSString *)getToken {
+    
+    return [self loadUser:@"user"].accessToken;
+}
+
 - (void) logout {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:nil forKey:@"user"];

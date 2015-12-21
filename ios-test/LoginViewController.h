@@ -19,6 +19,7 @@
 
 - (IBAction)singIn:(id)sender;
 - (IBAction)singUp:(id)sender;
+- (IBAction)backToLogin:(id)sender;
 
 @property (nonatomic, assign) UITextField* activeTextField;
 

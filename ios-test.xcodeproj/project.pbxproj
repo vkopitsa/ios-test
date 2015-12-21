@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C91062721C0CEB2E00AD34E2 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91062711C0CEB2E00AD34E2 /* ShopViewController.m */; };
+		C9152D251C1C94F300906B03 /* CartManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9152D241C1C94F300906B03 /* CartManager.m */; };
+		C9152D281C1D955F00906B03 /* CartCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9152D271C1D955F00906B03 /* CartCollectionViewController.m */; };
+		C9152D2C1C1DEC3500906B03 /* CartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9152D2A1C1DEC3500906B03 /* CartCollectionViewCell.m */; };
 		C91EF8DB1C137E54007454A4 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF8DA1C137E54007454A4 /* APIManager.m */; };
 		C91EF8DE1C13921E007454A4 /* GoodsRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF8DD1C13921E007454A4 /* GoodsRequestModel.m */; };
 		C91EF8E11C13923C007454A4 /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF8E01C13923C007454A4 /* GoodsModel.m */; };
@@ -26,9 +29,14 @@
 		C91EF9071C14DA01007454A4 /* GoodsAdminTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF9061C14DA01007454A4 /* GoodsAdminTableViewController.m */; };
 		C91EF90A1C14DA23007454A4 /* GoogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF9091C14DA23007454A4 /* GoogsTableViewController.m */; };
 		C91EF90D1C14EAD8007454A4 /* GoodsUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF90C1C14EAD8007454A4 /* GoodsUpdateViewController.m */; };
+		C91EF9101C161909007454A4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EF90F1C161909007454A4 /* Reachability.m */; };
+		C91EF9121C161959007454A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EF9111C161959007454A4 /* SystemConfiguration.framework */; };
+		C96F4B7C1C275ACE0073300E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F4B7B1C275ACE0073300E /* Login.storyboard */; };
+		C98339EF1C1774EA0099AAF8 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98339EE1C1774EA0099AAF8 /* GoodsViewController.m */; };
+		C98339F11C18D4280099AAF8 /* 1449717971_shopping_cart_loaded.png in Resources */ = {isa = PBXBuildFile; fileRef = C98339F01C18D4280099AAF8 /* 1449717971_shopping_cart_loaded.png */; };
+		C98339F41C18DCA00099AAF8 /* CartViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C98339F31C18DCA00099AAF8 /* CartViewControl.m */; };
 		C9CB38A71C03BA2900E55752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CB38A61C03BA2900E55752 /* main.m */; };
 		C9CB38AA1C03BA2900E55752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CB38A91C03BA2900E55752 /* AppDelegate.m */; };
-		C9CB38B01C03BA2900E55752 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB38AE1C03BA2900E55752 /* Login.storyboard */; };
 		C9CB38B31C03BA2900E55752 /* ios_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9CB38B11C03BA2900E55752 /* ios_test.xcdatamodeld */; };
 		C9CB38B51C03BA2900E55752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CB38B41C03BA2900E55752 /* Assets.xcassets */; };
 		C9CB38B81C03BA2900E55752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB38B61C03BA2900E55752 /* LaunchScreen.storyboard */; };
@@ -40,9 +48,6 @@
 		C9CB38E51C04DEFE00E55752 /* twitter1.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CB38E41C04DEFE00E55752 /* twitter1.png */; };
 		C9CB38E71C04DF2E00E55752 /* google116.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CB38E61C04DF2E00E55752 /* google116.png */; };
 		C9CB38EA1C04E0A400E55752 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CB38E91C04E0A400E55752 /* LoginViewController.m */; };
-		C9CB39021C05172A00E55752 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB39011C05172A00E55752 /* FBSDKShareKit.framework */; };
-		C9CB39051C05178300E55752 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB39031C05178300E55752 /* FBSDKCoreKit.framework */; };
-		C9CB39061C05178300E55752 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB39041C05178300E55752 /* FBSDKLoginKit.framework */; };
 		C9CB39081C065F9C00E55752 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB39071C065F9C00E55752 /* Shop.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +71,12 @@
 /* Begin PBXFileReference section */
 		C91062701C0CEB2E00AD34E2 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
 		C91062711C0CEB2E00AD34E2 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		C9152D231C1C94F300906B03 /* CartManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartManager.h; sourceTree = "<group>"; };
+		C9152D241C1C94F300906B03 /* CartManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartManager.m; sourceTree = "<group>"; };
+		C9152D261C1D955F00906B03 /* CartCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartCollectionViewController.h; sourceTree = "<group>"; };
+		C9152D271C1D955F00906B03 /* CartCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartCollectionViewController.m; sourceTree = "<group>"; };
+		C9152D291C1DEC3500906B03 /* CartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartCollectionViewCell.h; sourceTree = "<group>"; };
+		C9152D2A1C1DEC3500906B03 /* CartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartCollectionViewCell.m; sourceTree = "<group>"; };
 		C91EF8D91C137E54007454A4 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		C91EF8DA1C137E54007454A4 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		C91EF8DC1C13921E007454A4 /* GoodsRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsRequestModel.h; sourceTree = "<group>"; };
@@ -96,11 +107,19 @@
 		C91EF9091C14DA23007454A4 /* GoogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogsTableViewController.m; sourceTree = "<group>"; };
 		C91EF90B1C14EAD8007454A4 /* GoodsUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsUpdateViewController.h; sourceTree = "<group>"; };
 		C91EF90C1C14EAD8007454A4 /* GoodsUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsUpdateViewController.m; sourceTree = "<group>"; };
+		C91EF90E1C161909007454A4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C91EF90F1C161909007454A4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C91EF9111C161959007454A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C96F4B7B1C275ACE0073300E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C98339ED1C1774EA0099AAF8 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
+		C98339EE1C1774EA0099AAF8 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
+		C98339F01C18D4280099AAF8 /* 1449717971_shopping_cart_loaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1449717971_shopping_cart_loaded.png; sourceTree = "<group>"; };
+		C98339F21C18DCA00099AAF8 /* CartViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewControl.h; sourceTree = "<group>"; };
+		C98339F31C18DCA00099AAF8 /* CartViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewControl.m; sourceTree = "<group>"; };
 		C9CB38A21C03BA2900E55752 /* ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB38A61C03BA2900E55752 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9CB38A81C03BA2900E55752 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9CB38A91C03BA2900E55752 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9CB38AF1C03BA2900E55752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C9CB38B21C03BA2900E55752 /* ios_test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_test.xcdatamodel; sourceTree = "<group>"; };
 		C9CB38B41C03BA2900E55752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CB38B71C03BA2900E55752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,9 +137,6 @@
 		C9CB38E61C04DF2E00E55752 /* google116.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google116.png; sourceTree = "<group>"; };
 		C9CB38E81C04E0A400E55752 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C9CB38E91C04E0A400E55752 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		C9CB39011C05172A00E55752 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		C9CB39031C05178300E55752 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		C9CB39041C05178300E55752 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		C9CB39071C065F9C00E55752 /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,9 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CB39021C05172A00E55752 /* FBSDKShareKit.framework in Frameworks */,
-				C9CB39051C05178300E55752 /* FBSDKCoreKit.framework in Frameworks */,
-				C9CB39061C05178300E55752 /* FBSDKLoginKit.framework in Frameworks */,
+				C91EF9121C161959007454A4 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +169,8 @@
 		C91EF8D11C136386007454A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C91EF90E1C161909007454A4 /* Reachability.h */,
+				C91EF90F1C161909007454A4 /* Reachability.m */,
 				C9CB38A81C03BA2900E55752 /* AppDelegate.h */,
 				C9CB38A91C03BA2900E55752 /* AppDelegate.m */,
 				C9CB38B41C03BA2900E55752 /* Assets.xcassets */,
@@ -177,6 +193,8 @@
 				C91EF8E91C139448007454A4 /* APIAuth.m */,
 				C91EF8EB1C1394C0007454A4 /* APIRouteConfig.h */,
 				C91EF8EC1C1394C0007454A4 /* APIRouteConfig.m */,
+				C9152D231C1C94F300906B03 /* CartManager.h */,
+				C9152D241C1C94F300906B03 /* CartManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -184,13 +202,11 @@
 		C9CB38991C03BA2900E55752 = {
 			isa = PBXGroup;
 			children = (
+				C91EF9111C161959007454A4 /* SystemConfiguration.framework */,
 				C9CB38A41C03BA2900E55752 /* ios-test */,
 				C9CB38C11C03BA2900E55752 /* ios-testTests */,
 				C9CB38CC1C03BA2900E55752 /* ios-testUITests */,
 				C9CB38A31C03BA2900E55752 /* Products */,
-				C9CB39031C05178300E55752 /* FBSDKCoreKit.framework */,
-				C9CB39041C05178300E55752 /* FBSDKLoginKit.framework */,
-				C9CB39011C05172A00E55752 /* FBSDKShareKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +236,7 @@
 		C9CB38A51C03BA2900E55752 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C98339F01C18D4280099AAF8 /* 1449717971_shopping_cart_loaded.png */,
 				C91EF8F41C14CEE3007454A4 /* 1449454490_shopping_cart_empty.png */,
 				C91EF8F51C14CEE3007454A4 /* 1449454476_user_male.png */,
 				C91EF8F11C14CE59007454A4 /* shop_load_icon.png */,
@@ -254,7 +271,7 @@
 		C9CB38DB1C03BC9500E55752 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C9CB38AE1C03BA2900E55752 /* Login.storyboard */,
+				C96F4B7B1C275ACE0073300E /* Login.storyboard */,
 				C9CB38E81C04E0A400E55752 /* LoginViewController.h */,
 				C9CB38E91C04E0A400E55752 /* LoginViewController.m */,
 				C9CB39071C065F9C00E55752 /* Shop.storyboard */,
@@ -266,6 +283,12 @@
 				C91EF9091C14DA23007454A4 /* GoogsTableViewController.m */,
 				C91EF90B1C14EAD8007454A4 /* GoodsUpdateViewController.h */,
 				C91EF90C1C14EAD8007454A4 /* GoodsUpdateViewController.m */,
+				C98339ED1C1774EA0099AAF8 /* GoodsViewController.h */,
+				C98339EE1C1774EA0099AAF8 /* GoodsViewController.m */,
+				C9152D261C1D955F00906B03 /* CartCollectionViewController.h */,
+				C9152D271C1D955F00906B03 /* CartCollectionViewController.m */,
+				C9152D291C1DEC3500906B03 /* CartCollectionViewCell.h */,
+				C9152D2A1C1DEC3500906B03 /* CartCollectionViewCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +315,8 @@
 				C91EF8FD1C14D819007454A4 /* GoodsTableViewCell.h */,
 				C91EF8FE1C14D819007454A4 /* GoodsTableViewCell.m */,
 				C91EF8FF1C14D819007454A4 /* GoodsTableViewCell.xib */,
+				C98339F21C18DCA00099AAF8 /* CartViewControl.h */,
+				C98339F31C18DCA00099AAF8 /* CartViewControl.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -402,6 +427,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96F4B7C1C275ACE0073300E /* Login.storyboard in Resources */,
+				C98339F11C18D4280099AAF8 /* 1449717971_shopping_cart_loaded.png in Resources */,
 				C9CB38B81C03BA2900E55752 /* LaunchScreen.storyboard in Resources */,
 				C91EF8F31C14CE59007454A4 /* shop_load_icon.png in Resources */,
 				C91EF8FC1C14D7F3007454A4 /* GoodsAdminCellTableViewCell.xib in Resources */,
@@ -415,7 +442,6 @@
 				C9CB38E71C04DF2E00E55752 /* google116.png in Resources */,
 				C9CB39081C065F9C00E55752 /* Shop.storyboard in Resources */,
 				C9CB38DF1C04DDC000E55752 /* vk.png in Resources */,
-				C9CB38B01C03BA2900E55752 /* Login.storyboard in Resources */,
 				C91EF8F61C14CEE3007454A4 /* 1449454490_shopping_cart_empty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,22 +467,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98339EF1C1774EA0099AAF8 /* GoodsViewController.m in Sources */,
 				C91EF9001C14D819007454A4 /* GoodsTableViewCell.m in Sources */,
 				C9CB38AA1C03BA2900E55752 /* AppDelegate.m in Sources */,
 				C91EF8EA1C139448007454A4 /* APIAuth.m in Sources */,
 				C91EF8FB1C14D7F3007454A4 /* GoodsAdminCellTableViewCell.m in Sources */,
+				C9152D2C1C1DEC3500906B03 /* CartCollectionViewCell.m in Sources */,
 				C9CB38A71C03BA2900E55752 /* main.m in Sources */,
+				C98339F41C18DCA00099AAF8 /* CartViewControl.m in Sources */,
 				C91EF9071C14DA01007454A4 /* GoodsAdminTableViewController.m in Sources */,
 				C91EF8DE1C13921E007454A4 /* GoodsRequestModel.m in Sources */,
 				C91EF8DB1C137E54007454A4 /* APIManager.m in Sources */,
 				C91EF8E11C13923C007454A4 /* GoodsModel.m in Sources */,
+				C9152D251C1C94F300906B03 /* CartManager.m in Sources */,
 				C9CB38B31C03BA2900E55752 /* ios_test.xcdatamodeld in Sources */,
 				C91EF90D1C14EAD8007454A4 /* GoodsUpdateViewController.m in Sources */,
 				C91062721C0CEB2E00AD34E2 /* ShopViewController.m in Sources */,
 				C91EF90A1C14DA23007454A4 /* GoogsTableViewController.m in Sources */,
+				C9152D281C1D955F00906B03 /* CartCollectionViewController.m in Sources */,
 				C9CB38EA1C04E0A400E55752 /* LoginViewController.m in Sources */,
 				C91EF8E71C13941C007454A4 /* APIRequest.m in Sources */,
 				C91EF8ED1C1394C0007454A4 /* APIRouteConfig.m in Sources */,
+				C91EF9101C161909007454A4 /* Reachability.m in Sources */,
 				C91EF8E41C139262007454A4 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,14 +525,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9CB38AE1C03BA2900E55752 /* Login.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9CB38AF1C03BA2900E55752 /* Base */,
-			);
-			name = Login.storyboard;
-			sourceTree = "<group>";
-		};
 		C9CB38B61C03BA2900E55752 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

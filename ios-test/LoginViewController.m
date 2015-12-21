@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     // Do any additional setup after loading the view.
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -129,6 +131,8 @@
     // Request to stop receiving accelerometer events and turn off accelerometer
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -211,6 +215,10 @@
 
 - (IBAction)singUp:(id)sender {
     [self registration];
+}
+
+- (IBAction)backToLogin:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) registration {
@@ -303,5 +311,6 @@
     });
     
 }
+
 
 @end

@@ -17,7 +17,7 @@
     
 }
 
-- (NSString *) authorization: (NSString *)login
+- (void) authorization: (NSString *)login
                     password: (NSString *)password
                      success:(void (^)(NSDictionary *))success
                      failure:(void (^)(NSError *error))failure{
@@ -26,9 +26,6 @@
              data:[NSString stringWithFormat:@"identifier=%@&password=%@", login, password]
           success:success
           failure:failure];
-    
-    return @"sdf";
-    
 }
 
 - (void) registration: (NSString *)login
@@ -42,6 +39,51 @@
           success:success
           failure:failure];
     
+}
+
+- (void) getGoods: (NSInteger *)limit
+                         skip: (NSInteger *)skip
+                      success:(void (^)(NSMutableArray *))success
+                      failure:(void (^)(NSError *error))failure {
+    
+    [request GET:[route getRoute:@"goods"]
+          success:success
+          failure:failure];
+}
+
+- (void) createGoods: (GoodsModel *)goods
+             success:(void (^)(NSDictionary *))success
+             failure:(void (^)(NSError *error))failure {
+    
+    [request POST:[route getRoute:@"goods"]
+            data:[NSString stringWithFormat:@"name=%@&count=%@&price=%@",
+                  goods.name,
+                  goods.count,
+                  goods.price]
+         success:success
+         failure:failure];
+}
+
+- (void) updateGoods: (GoodsModel *)goods
+          success:(void (^)(NSMutableArray *))success
+          failure:(void (^)(NSError *error))failure {
+    
+    [request PUT:[NSString stringWithFormat:[route getRoute:@"oneGoods"], goods.uid]
+             data:[NSString stringWithFormat:@"name=%@&count=%@&price=%@",
+                   goods.name,
+                   goods.count,
+                   goods.price]
+         success:success
+         failure:failure];
+}
+
+- (void) removeGoods: (GoodsModel *)goods
+             success:(void (^)(NSMutableArray *))success
+             failure:(void (^)(NSError *error))failure {
+    
+    [request DELETE:[NSString stringWithFormat:[route getRoute:@"oneGoods"], goods.uid]
+         success:success
+         failure:failure];
 }
 
 - (id) init {

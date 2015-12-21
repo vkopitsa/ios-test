@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "GoodsRequestModel.h"
+#import "GoodsModel.h"
 
 @interface APIManager : NSObject
 
-- (NSString *) authorization: (NSString *)login
+- (void) authorization: (NSString *)login
                     password: (NSString *)password
                      success:(void (^)(NSDictionary *))success
                      failure:(void (^)(NSError *error))failure;
@@ -21,6 +22,23 @@
                    password: (NSString *)password
                     success:(void (^)(NSDictionary *))success
                     failure:(void (^)(NSError *error))failure;
+
+- (void) getGoods: (NSInteger *)limit
+             skip: (NSInteger *)skip
+          success:(void (^)(NSMutableArray *))success
+          failure:(void (^)(NSError *error))failure;
+
+- (void) createGoods: (GoodsModel *)goods
+             success:(void (^)(NSDictionary *))success
+             failure:(void (^)(NSError *error))failure;
+
+- (void) updateGoods: (GoodsModel *)goods
+             success:(void (^)(NSMutableArray *))success
+             failure:(void (^)(NSError *error))failure;
+
+- (void) removeGoods: (GoodsModel *)goods
+             success:(void (^)(NSMutableArray *))success
+             failure:(void (^)(NSError *error))failure;
 
 + (id) sharedManager;
 

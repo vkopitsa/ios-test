@@ -9,8 +9,12 @@
 #import "AppDelegate.h"
 #import "ShopViewController.h"
 #import "APIAuth.h"
+#import "Reachability.h"
+#import "CartViewControl.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) CartViewControl *cart;
 
 @end
 
@@ -46,9 +50,9 @@
     // Set the window object to be the key window and show it
     [self.window makeKeyAndVisible];
     
+    [self isConnection];
     
-    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
+    //[self startCart];
     
     // Override point for customization after application launch.
     return YES;
@@ -196,6 +200,108 @@
 
     
     return YES;
+}
+
+- (void) isConnection {
+
+    // Allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"shop-test.of-it.org"];
+    
+    
+    UIView *viewPopup=[[UIView alloc]init];
+    [viewPopup setBackgroundColor:[UIColor blackColor]];
+    viewPopup.alpha=0.1f;
+    [viewPopup setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    [viewPopup setCenter:self.window.center];
+    
+    UILabel *yourLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 50)];
+    [yourLabel setCenter:viewPopup.center];
+    yourLabel.textAlignment = NSTextAlignmentCenter;
+    [yourLabel setTextColor:[UIColor blackColor]];
+    [yourLabel setBackgroundColor:[UIColor redColor]];
+    yourLabel.text = @"No internet connection";
+
+
+    
+    // Set the blocks
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            viewPopup.hidden = YES;
+            yourLabel.hidden = YES;
+        });
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            viewPopup.hidden = NO;
+            yourLabel.hidden = NO;
+            //[self.window bringSubviewToFront:viewPopup];
+            [self.window addSubview:viewPopup];
+            [self.window bringSubviewToFront:[viewPopup superview]];
+            [[viewPopup superview] addSubview:yourLabel];
+            [[viewPopup superview] bringSubviewToFront:yourLabel];
+
+        });
+    };
+    
+    // Start the notifier, which will cause the reachability object to retain itself!
+    [reach startNotifier];
+    
+}
+
+
+- (void) startCart: (NSString *) amount {
+    
+    
+    if (self.cart != nil) {
+        self.cart.hidden = NO;
+        [[self.window.rootViewController.view superview] bringSubviewToFront:self.cart];
+    }else{
+        self.cart = [[CartViewControl alloc]initWithFrame:CGRectMake(self.window.rootViewController.view.frame.size.width - 48 - 20.f,
+                                                                     self.window.rootViewController.view.frame.size.height - 48 - 60.f,
+                                                                     48,
+                                                                     48)];
+        
+        //[[crat superview] bringSubviewToFront:imageView];
+        [[self.window.rootViewController.view superview] addSubview:self.cart];
+        [[self.window.rootViewController.view superview] bringSubviewToFront:self.cart];
+        
+        
+        self.cart.hidden = NO;
+        
+        //The setup code (in viewDidLoad in your view controller)
+        UITapGestureRecognizer *singleFingerTap =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(handleSingleTap:)];
+        [self.cart addGestureRecognizer:singleFingerTap];
+    }
+    
+    [self.cart setText:[NSString stringWithFormat:@"%@", [[CartManager sharedManager] getCountGoodsInCart]]];
+    
+}
+
+- (void)hideCart{
+    NSLog(@"hideCart");
+    self.cart.hidden = YES;
+}
+
+- (void)showCart{
+    NSLog(@"showCart");
+    self.cart.hidden = NO;
+    [[self.window.rootViewController.view superview] bringSubviewToFront:self.cart];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+    CGPoint location = [recognizer locationInView:[recognizer.view superview]];
+    NSLog(@"Tap %f %f", location.x, location.y);
+
+    
+    //CartCollectionViewController
+    
+    [self.window.rootViewController performSegueWithIdentifier:@"gocartnew" sender:self];
+
 }
 
 @end
